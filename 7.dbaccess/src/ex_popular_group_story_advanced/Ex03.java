@@ -27,8 +27,8 @@ public class Ex03 {
                       """;
 
         try (Connection con = DriverManager.getConnection(url, user, password);
-                PreparedStatement pre = con.prepareStatement(sql);) {
-            ResultSet result = pre.executeQuery();
+                PreparedStatement pre = con.prepareStatement(sql);
+                ResultSet result = pre.executeQuery();) {
 
             while (result.next()) {
                 String name = result.getString("name");
